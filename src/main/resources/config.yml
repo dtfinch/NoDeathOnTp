@@ -1,0 +1,12 @@
+# NoDeathOnTp Config file
+
+General:
+    # Max time to repair/cancel after a teleportation (miliseconds)
+    MaxTimeCancelDamage: 5000
+    # Min time to wait after a damage cancel before redo
+    MinTimeAfterCancel: 500
+    Debug: False
+    
+Messages:
+    # Message when the location of the player is changed
+    PlayerLocationChange: 'Teleportation location changed for '
