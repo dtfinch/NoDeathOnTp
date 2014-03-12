@@ -17,6 +17,7 @@
  */
 package me.tabinol.nodeathontp;
 
+import java.io.IOException;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.logging.Level;
@@ -47,6 +48,14 @@ public class NoDeathOnTp extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
 
+        //For mcstats source : https://github.com/Hidendra/Plugin-Metrics/wiki/Usage
+        try {
+            MetricsLite metrics = new MetricsLite(this);
+            metrics.start();
+        } catch (IOException e) {
+            // Failed to submit the stats :-(
+        }
+        
         this.saveDefaultConfig();
         maxTimeCancelDamage = this.getConfig().getLong("General.MaxTimeCancelDamage");
         minTimeAfterCancel = this.getConfig().getLong("General.MinTimeAfterCancel");

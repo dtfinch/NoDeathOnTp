@@ -1,6 +1,6 @@
 name: NoDeathOnTp
 main: me.tabinol.nodeathontp.NoDeathOnTp
-version: 1.0
+version: ${project.version}-b${build.number}
 permissions:
     nodeathontp.notify:
         description: Notify for death cancellation
