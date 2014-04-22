@@ -132,7 +132,7 @@ public class NoDeathOnTp extends JavaPlugin implements Listener {
 
         do {
             loc.add(0, 1, 0);
-        } while (loc.getBlockY() != loc.getWorld().getMaxHeight()
+        } while (loc.getBlockY() <= loc.getWorld().getMaxHeight()
                 && !(loc.getBlock().getType() != Material.LAVA
                 && loc.getBlock().getRelative(BlockFace.UP).getType() == Material.AIR
                 && loc.getBlock().getRelative(BlockFace.UP, 2).getType() == Material.AIR));
